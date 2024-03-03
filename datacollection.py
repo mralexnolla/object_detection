@@ -7,12 +7,12 @@ import time
 # for video capturing
 
 cap = cv2.VideoCapture(0)
-detector = HandDetector(maxHands=2)
+detector = HandDetector(maxHands=1)
 offset = 20
 imgSize = 300
 counter = 0
 
-folder = "Data/Hello"
+folder = "Data/Yes"
 
 # first i go for data collection
 
@@ -58,7 +58,7 @@ while True:
     # to open cameras
     cv2.imshow("Image", img)
     key = cv2.waitKey(1)
-    if key == ord('s'):
+    if key == ord('h'):
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
